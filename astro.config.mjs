@@ -16,6 +16,12 @@ export default defineConfig({
   	output: "server",
   	adapter: cloudflare({
 
+		routes: {
+
+			exclude: ["/icons/*", "/images/*"]
+
+		},
+
 		runtime: {
 
 		  	mode: 'local',
@@ -23,6 +29,10 @@ export default defineConfig({
 
 		}
 
-	})
-
+	}),
+	image: {
+		service: {
+			entrypoint: "astro/assets/services/noop"
+		}
+	}
 })
