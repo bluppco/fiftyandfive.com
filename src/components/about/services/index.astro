@@ -1,0 +1,39 @@
+---
+
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import ServiceCard from "@/components/about/services/card/index.astro"
+
+const data = Array(3).fill({
+
+    title: "SOCIAL",
+    phonetic_notation: "/’sōSHəl/",
+    description: "content creation, creative strategy, community management, influencer partnerships, you name it, we’ve done it.",
+    cover: "/delete-later/social.png"
+
+})
+
+---
+<Container>
+    <section class="grid grid-cols-3 gap-20">
+        {
+
+            data.map( ( value ) => {
+
+                return(
+                    <ServiceCard
+                        alternative_text={ value.title }
+                        description={ value.description }
+                        phonetic_notation={ value.phonetic_notation }
+                        source={ value.cover }
+                        title={ value.title }
+                    />
+                )
+
+            })
+
+        }
+    </section>
+</Container>
