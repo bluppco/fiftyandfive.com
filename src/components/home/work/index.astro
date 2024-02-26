@@ -1,0 +1,40 @@
+---
+
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO ATOMS
+import Video from "@/atoms/video/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    CDN,
+    PROJECT
+
+} = Astro.props
+
+const data = Array(12).fill({
+
+    source: "/delete-later/SM-2.mp4"
+
+})
+
+---
+<Container>
+    <section class="grid grid-cols-3 gap-5 pb-32">
+        {
+
+            data.map( ( value ) => {
+
+                return(
+                    <Video>
+                        <source src={ value.source } type="video/mp4" />
+                    </Video>
+                )
+
+            })
+
+        }
+    </section>
+</Container>
