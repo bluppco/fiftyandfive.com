@@ -47,6 +47,7 @@ module.exports = {
 			},
 			colors: {
 
+				"faf_black": "#333333",
 
 			},
 			fontFamily: {
