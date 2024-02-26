@@ -1,0 +1,25 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import Link from "@/atoms/link/target-blank/index.astro"
+import PictureInternalContain from "@/atoms/picture/internal/contain/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    alternative_text,
+    aria_label,
+    href,
+    source
+
+} = Astro.props
+
+---
+<Link href={ href } aria_label={ aria_label }>
+    <div class="size-10">
+        <PictureInternalContain
+            alternative_text={ alternative_text }
+            source={ source }
+        />
+    </div>
+</Link>
