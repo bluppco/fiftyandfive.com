@@ -6,7 +6,6 @@ import Container from "@/layouts/container/index.astro"
 // IMPORTS ASTRO COMPONENTS
 import Footer from "@/components/common/footer/index.astro"
 import Header from "@/components/common/header/index.astro"
-import HeaderBanner from "@/components/common/header-banner/index.astro"
 
 // IMPORTS ASTRO ATOMS
 import HeadingTwo from "@/atoms/heading/two/extrabold/index.astro"
@@ -23,10 +22,9 @@ const data = {
 }
 
 ---
-<HeaderBanner ENVIRONMENT={ ENVIRONMENT } />
-<Header />
+<Header ENVIRONMENT={ ENVIRONMENT } />
 <Container>
-    <section class="grid grid-cols-5 gap-20 py-20 relative h-full z-10 bg-white">
+    <section class="grid grid-cols-5 gap-20 py-20 relative h-screen z-10 bg-white pt-36">
         <section class="col-span-2 space-y-20">
             <HeadingTwo>{ data.title }</HeadingTwo>
             <Paragraph4xl>{ data.description }</Paragraph4xl>
