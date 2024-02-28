@@ -1,11 +1,12 @@
 // IMPORTS LAYOUTS
 import Container from "@/layouts/container/jsx/index.jsx"
 
-// IMPORTS ASTRO ATOMS
-import LinkAtom from "@/atoms/link/jsx/index.jsx"
-
-// IMPORTS JSX COMPONENTS
+// IMPORTS COMPONENTS
 import HeaderBanner from "@/components/common/header-banner/jsx/index.jsx"
+import HeaderMobile from "@/components/common/header/mobile/index.jsx"
+
+// IMPORTS ATOMS
+import LinkAtom from "@/atoms/link/jsx/index.jsx"
 
 // HEADER COLLECTION
 import { getCollection } from "astro:content"
@@ -14,8 +15,7 @@ let header_data = await getCollection("header")
 header_data = header_data.sort((a, b) => a.data.order - b.data.order)
 
 import { Link, animateScroll as scroll } from "react-scroll"
-import { motion, useScroll, useAnimation, useMotionValueEvent, AnimatePresence } from "framer-motion"
-import React from "react"
+import { motion, useScroll, useAnimation, useMotionValueEvent } from "framer-motion"
 
 const Header = ( props ) => {
 
@@ -87,6 +87,7 @@ const Header = ( props ) => {
                     </div>
                 </Link>
             </header>
+            <HeaderMobile header_data={ header_data } />
         </>
     )
 
