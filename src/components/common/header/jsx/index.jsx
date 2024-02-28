@@ -48,7 +48,7 @@ const Header = ( props ) => {
     return (
         <>
             <header className="hidden md:block bg-white" id="header">
-                <motion.header className="border-b border-zinc-200 bg-white w-full fixed left-0 z-30"
+                <motion.header className="border-b border-zinc-100 bg-white w-full fixed left-0 z-30"
                     variants={ squareVariants }
                     initial="display"
                     animate={ controls }
