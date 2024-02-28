@@ -1,0 +1,32 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import FooterIcon from "@/atoms/footer/icon/index.astro"
+
+// IMPORTS FOOTER COLLECTION
+import { getCollection } from 'astro:content'
+
+let footer = await getCollection('footer')
+footer = footer.sort((a, b) => a.data.order - b.data.order).filter( ( item ) => item.data.live )
+
+---
+<footer class="h-28 flex items-center w-full">
+    <section class="flex items-center gap-8 md:gap-20 justify-center md:fixed bottom-8 w-full">
+        {
+
+            footer.map( ( value ) => {
+
+                return(
+                    <FooterIcon
+                        alternative_text={ value.data.title }
+                        aria_label={ value.data.title }
+                        href={ value.data.link }
+                        source={ value.data.image_source }
+                    />
+                )
+
+            })
+
+        }
+    </section>
+</footer>

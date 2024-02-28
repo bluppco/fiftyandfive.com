@@ -1,0 +1,13 @@
+---
+
+// IMPORTS JSX COMPONENTS
+import Header from "@/components/common/header/jsx/index.jsx"
+
+// GET ASTRO PROPS
+const { ENVIRONMENT } = Astro.props
+
+---
+<Header
+    client:load
+    ENVIRONMENT={ ENVIRONMENT }
+/>

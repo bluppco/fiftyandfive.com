@@ -1,0 +1,23 @@
+---
+
+// RUNTIME
+const runtime = Astro.locals.runtime
+
+const { ENVIRONMENT } = runtime.env
+
+// IMPORTS LAYOUT COMPONENTS
+import Layout from "@/layouts/layout/index.astro"
+
+// ABOUT COMPONENT
+import Contact from "@/components/contact/index.astro"
+
+---
+<Layout
+	description=""
+	image=""
+	title=""
+>
+	<Contact
+        ENVIRONMENT={ ENVIRONMENT }
+    />
+</Layout>

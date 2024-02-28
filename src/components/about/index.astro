@@ -1,0 +1,27 @@
+---
+
+// IMPORTS ASTRO COMPONENTS
+import Footer from "@/components/common/footer/index.astro"
+import Header from "@/components/common/header/index.astro"
+import Portfolio from "@/components/about/portfolio/index.astro"
+import Services from "@/components/about/services/index.astro"
+import WhoAreWe from "@/components/about/who-are-we/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    CDN,
+    ENDPOINT,
+    ENVIRONMENT,
+    PROJECT
+
+} = Astro.props
+
+---
+<Header ENVIRONMENT={ ENVIRONMENT } />
+<section class="relative h-full z-10 bg-white pt-32">
+    <WhoAreWe />
+    <Services />
+    <Portfolio />
+</section>
+<Footer />

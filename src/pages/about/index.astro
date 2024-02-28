@@ -1,0 +1,33 @@
+---
+
+// RUNTIME
+const runtime = Astro.locals.runtime
+
+const {
+
+    CDN,
+    ENDPOINT,
+    ENVIRONMENT,
+    PROJECT
+
+} = runtime.env
+
+// IMPORTS LAYOUT COMPONENTS
+import Layout from "@/layouts/layout/index.astro"
+
+// ABOUT COMPONENT
+import About from "@/components/about/index.astro"
+
+---
+<Layout
+	description=""
+	image=""
+	title=""
+>
+	<About
+        CDN={ CDN }
+        ENDPOINT={ ENDPOINT }
+        ENVIRONMENT={ ENVIRONMENT }
+        PROJECT={ PROJECT }
+    />
+</Layout>

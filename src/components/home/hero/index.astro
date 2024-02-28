@@ -1,0 +1,19 @@
+---
+
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO ATOMS
+import HeadingTwo from "@/atoms/heading/two/semibold/index.astro"
+
+const title_one = "culture."
+const title_two = "creative."
+const title_three = "commitment."
+---
+<Container>
+    <section class="py-4 md:py-14 pt-36 md:pt-48">
+        <HeadingTwo>{ title_one }</HeadingTwo>
+        <HeadingTwo>{ title_two }</HeadingTwo>
+        <HeadingTwo>{ title_three }</HeadingTwo>
+    </section>
+</Container>
