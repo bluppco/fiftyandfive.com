@@ -1,0 +1,23 @@
+---
+
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO ATOMS
+import HeadingTwo from "@/atoms/heading/two/extrabold/index.astro"
+import Paragraph4xl from "@/atoms/paragraph/4xl/index.astro"
+
+const data = {
+
+    title: "who we are.",
+    description: "we imagine, develop, and execute brand-focused storytelling through stunning creative."
+
+}
+
+---
+<Container>
+    <section class="md:w-[60%] space-y-4 md:space-y-14 md:py-20">
+        <HeadingTwo>{ data.title }</HeadingTwo>
+        <Paragraph4xl>{ data.description }</Paragraph4xl>
+    </section>
+</Container>
