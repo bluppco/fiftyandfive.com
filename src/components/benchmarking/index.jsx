@@ -43,7 +43,15 @@ const BenchmarkingJSX = ( props ) => {
         }
 
     }
-    const { data } = props
+    // GET PROPS
+    const {
+
+        about_page_benchmarking,
+        contact_page_benchmarking,
+        home_page_benchmarking,
+        spotlight_page_benchmarking
+
+    } = props
     return (
         <div className="flex flex-col gap-10">
             <h1 className="font-semibold">Benchmarking Home Page</h1>
@@ -64,7 +72,7 @@ const BenchmarkingJSX = ( props ) => {
                 <TableBody>
                     {
 
-                        data.data.map( ( value, index ) => {
+                        home_page_benchmarking.data.map( ( value, index ) => {
 
                             return (
                                 <TableRow className={ value.type === "Total" ? "font-semibold" : "" }  key={ "type-split-" + index }>
@@ -101,7 +109,7 @@ const BenchmarkingJSX = ( props ) => {
                 <TableBody>
                     {
 
-                        data.bandwidth.map( ( value, index ) => {
+                        home_page_benchmarking.bandwidth.map( ( value, index ) => {
 
                             return (
                                 <TableRow className={ value.type === "Total" ? "font-semibold" : "" } key={ "bandwidth-saved-" + index }>

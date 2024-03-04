@@ -18,7 +18,10 @@ import HeaderBanner from "@/components/common/header-banner/index.astro"
 import BenchmarkingJSX from "@/components/benchmarking/index.jsx"
 
 // IMPORTS BENCHMARKING FROM MD
-import { frontmatter as benchmarking } from "@/content/benchmarking/home.mdx"
+import { frontmatter as about_page_benchmarking } from "@/content/benchmarking/home.mdx"
+import { frontmatter as contact_page_benchmarking } from "@/content/benchmarking/home.mdx"
+import { frontmatter as home_page_benchmarking } from "@/content/benchmarking/home.mdx"
+import { frontmatter as spotlight_page_benchmarking } from "@/content/benchmarking/home.mdx"
 
 ---
 <Layout
@@ -26,11 +29,19 @@ import { frontmatter as benchmarking } from "@/content/benchmarking/home.mdx"
 	description={ "Benchmarking" }
 	image=""
 >
-    <HeaderBanner ENVIRONMENT={ ENVIRONMENT } />
+    <HeaderBanner
+        ENVIRONMENT={ ENVIRONMENT }
+    />
     <Header />
     <section class="py-40">
         <Container>
-            <BenchmarkingJSX client:load data={ benchmarking }/>
+            <BenchmarkingJSX
+                about_page_benchmarking={ about_page_benchmarking }
+                client:load
+                contact_page_benchmarking={ contact_page_benchmarking }
+                home_page_benchmarking={ home_page_benchmarking }
+                spotlight_page_benchmarking={ spotlight_page_benchmarking }
+            />
         </Container>
     </section>
     <Footer />
