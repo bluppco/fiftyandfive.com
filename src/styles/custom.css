@@ -1,0 +1,34 @@
+.markdown.paragraph4xl p {
+    @apply font-helvetica_neue_thin font-thin text-4xl text-faf_charcoal_black py-4 !important;
+}
+
+@font-face {
+
+    font-family: 'Helvetica Neue Thin';
+    src: url('/fontsHelveticaNeue-Thin.otf');
+
+}
+@font-face {
+
+    font-family: 'Helvetica Neue Light';
+    src: url('/fonts/HelveticaNeue-Light.otf');
+
+}
+@font-face {
+
+    font-family: 'Helvetica Neue Medium';
+    src: url('/fonts/HelveticaNeue-Medium.otf');
+
+}
+@font-face {
+
+    font-family: 'Helvetica Neue Bold';
+    src: url('/fonts/HelveticaNeueBold.ttf');
+
+}
+@font-face {
+
+    font-family: 'Helvetica Neue ExtraBold';
+    src: url('/fonts/HelveticaNeue-Heavy.otf');
+
+}

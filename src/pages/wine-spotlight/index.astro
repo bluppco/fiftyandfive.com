@@ -3,7 +3,22 @@
 // RUNTIME
 const runtime = Astro.locals.runtime
 
-const { ENVIRONMENT } = runtime.env
+const {
+
+	ENDPOINT,
+	ENVIRONMENT
+
+} = runtime.env
+const data = await spotlightAPI( ENVIRONMENT, ENDPOINT )
+
+// API
+import { spotlightAPI } from "@/api/spotlight/index.js"
+
+const {
+
+	spotlight
+
+} = data
 
 // IMPORTS LAYOUT COMPONENTS
 import Layout from "@/layouts/layout/index.astro"
@@ -18,6 +33,7 @@ import Spotlight from "@/components/spotlight/index.astro"
 	title=""
 >
 	<Spotlight
+		data={ spotlight }
         ENVIRONMENT={ ENVIRONMENT }
     />
 </Layout>

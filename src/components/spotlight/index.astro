@@ -12,29 +12,29 @@ import HeadingTwo from "@/atoms/heading/two/extrabold/index.astro"
 import Paragraph4xl from "@/atoms/paragraph/4xl/index.astro"
 
 // GET ASTRO PROPS
-const { ENVIRONMENT } = Astro.props
+const {
 
-const data = {
+    data,
+    ENVIRONMENT
 
-    title: "wine spotlight.",
-    description: "check out our 2022 wine spotlight."
-
-}
+} = Astro.props
 
 ---
-<Header ENVIRONMENT={ ENVIRONMENT } />
+<Header
+    ENVIRONMENT={ ENVIRONMENT }
+/>
 <Container>
     <section class="md:grid md:grid-cols-5 md:gap-20 md:py-20 space-y-4 md:space-y-0 relative h-screen z-10 bg-white pt-32 md:pt-52">
         <section class="md:col-span-2 space-y-4 md:space-y-20">
             <HeadingTwo>{ data.title }</HeadingTwo>
             <Paragraph4xl>{ data.description }</Paragraph4xl>
         </section>
-        <section class="md:col-span-3 w-full h-72 md:h-96">
+        <section class="md:col-span-3 w-full h-72 md:h-96 bg-zinc-200">
             <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/PTTrFw8872M"
-                title="FIFTY &amp; FIVE    wine spotlight"
+                src={ data.youtube_link }
+                title="FIFTY &amp; FIVE wine spotlight"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>

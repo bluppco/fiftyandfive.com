@@ -2,14 +2,16 @@
 
 // IMPORTS ASTRO ATOMS
 import HeadingThreeDarkGray from "@/atoms/heading/three/dark-gray/index.astro"
-import PictureInternalContain from "@/atoms/picture/internal/contain/index.astro"
+import PictureContain from "@/atoms/picture/contain/index.astro"
 
 // GET ASTRO PROPS
 const {
 
     alternative_text,
+    CDN,
     description,
     phonetic_notation,
+    PROJECT,
     source,
     title
 
@@ -18,12 +20,14 @@ const {
 ---
 <div>
     <div class="size-72">
-        <PictureInternalContain
+        <PictureContain
             alternative_text={ alternative_text }
+            CDN={ CDN }
+            PROJECT={ PROJECT }
             source={ source }
         />
     </div>
     <HeadingThreeDarkGray>{ title }</HeadingThreeDarkGray>
     <p class="text-faf_dark_gray text-2xl font-helvetica_neue font-extralight">{ phonetic_notation }</p>
-    <p class="text-faf_dark_gray text-base font-helvetica_neue font-light">{ description }</p>
+    <p class="text-faf_dark_gray text-base font-helvetica_neue_light font-light">{ description }</p>
 </div>
