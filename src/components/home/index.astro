@@ -11,15 +11,21 @@ const {
 
     CDN,
     ENVIRONMENT,
+    home_data,
     PROJECT
 
 } = Astro.props
 
 ---
-<Header ENVIRONMENT={ ENVIRONMENT } />
-<Hero />
+<Header
+    ENVIRONMENT={ ENVIRONMENT }
+/>
+<Hero
+    data={ home_data.hero }
+/>
 <Work
     CDN={ CDN }
+    data={ home_data.work }
     PROJECT={ PROJECT }
 />
 <Footer />

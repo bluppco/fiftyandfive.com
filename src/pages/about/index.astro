@@ -11,6 +11,18 @@ const {
     PROJECT
 
 } = runtime.env
+const data = await aboutAPI( ENVIRONMENT, ENDPOINT )
+
+// API
+import { aboutAPI } from "@/api/about/index.js"
+
+const {
+
+	about,
+	page,
+    portfolio
+
+} = data
 
 // IMPORTS LAYOUT COMPONENTS
 import Layout from "@/layouts/layout/index.astro"
@@ -26,8 +38,10 @@ import About from "@/components/about/index.astro"
 >
 	<About
         CDN={ CDN }
-        ENDPOINT={ ENDPOINT }
+        data={ about }
         ENVIRONMENT={ ENVIRONMENT }
+        page={ page }
+        portfolio={ portfolio }
         PROJECT={ PROJECT }
     />
 </Layout>

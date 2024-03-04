@@ -11,17 +11,31 @@ import WhoAreWe from "@/components/about/who-are-we/index.astro"
 const {
 
     CDN,
-    ENDPOINT,
+    data,
     ENVIRONMENT,
+    page,
+    portfolio,
     PROJECT
 
 } = Astro.props
 
 ---
-<Header ENVIRONMENT={ ENVIRONMENT } />
+<Header
+    ENVIRONMENT={ ENVIRONMENT }
+/>
 <section class="relative h-full z-10 bg-white pt-32">
-    <WhoAreWe />
-    <Services />
-    <Portfolio />
+    <WhoAreWe
+        data={ page }
+    />
+    <Services
+        CDN={ CDN }
+        data={ data }
+        PROJECT={ PROJECT }
+    />
+    <Portfolio
+        CDN={ CDN }
+        data={ portfolio }
+        PROJECT={ PROJECT }
+    />
 </section>
 <Footer />

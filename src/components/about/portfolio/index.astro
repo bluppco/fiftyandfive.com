@@ -6,15 +6,17 @@ import Container from "@/layouts/container/index.astro"
 // IMPORTS ASTRO ATOMS
 import HeadingTwo from "@/atoms/heading/two/extrabold/index.astro"
 import Paragraph4xl from "@/atoms/paragraph/4xl/index.astro"
-import PictureInternalContain from "@/atoms/picture/internal/contain/index.astro"
+import PictureContain from "@/atoms/picture/contain/index.astro"
 
-const data = {
 
-    title: "our portfolio.",
-    description: "clients past and present.",
-    cover: "/delete-later/portfolio.png"
+// GET ASTRO PROPS
+const {
 
-}
+    CDN,
+    data,
+    PROJECT
+
+} = Astro.props
 
 ---
 <Container>
@@ -22,8 +24,10 @@ const data = {
         <HeadingTwo>{ data.title }</HeadingTwo>
         <Paragraph4xl>{ data.description }</Paragraph4xl>
         <div class="w-full h-full">
-            <PictureInternalContain
+            <PictureContain
                 alternative_text={ data.title }
+                CDN={ CDN }
+                PROJECT={ PROJECT }
                 source={ data.cover }
             />
         </div>

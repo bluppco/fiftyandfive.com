@@ -1,0 +1,3 @@
+.markdown.paragraph4xl p {
+    @apply font-helvetica_neue font-thin text-4xl text-faf_charcoal_black py-4 !important;
+}
