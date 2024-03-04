@@ -11,6 +11,17 @@ const {
     PROJECT
 
 } = runtime.env
+const data = await homeAPI( ENVIRONMENT, ENDPOINT )
+
+// API
+import { homeAPI } from "@/api/home/index.js"
+
+const {
+
+	home_data,
+	meta
+
+} = data
 
 // IMPORTS LAYOUT COMPONENTS
 import Layout from "@/layouts/layout/index.astro"
@@ -20,14 +31,17 @@ import Home from "@/components/home/index.astro"
 
 ---
 <Layout
-	description=""
-	image=""
-	title=""
+	CDN={ CDN }
+	description={ meta.description }
+	image={ meta.cover }
+	PROJECT={ PROJECT }
+	title={ meta.title }
 >
 	<Home
 		CDN={ CDN }
 		ENDPOINT={ ENDPOINT }
 		ENVIRONMENT={ ENVIRONMENT }
+		home_data={ home_data }
 		PROJECT={ PROJECT }
 	/>
 </Layout>

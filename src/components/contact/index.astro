@@ -10,42 +10,37 @@ import Header from "@/components/common/header/index.astro"
 
 // IMPORTS ASTRO ATOMS
 import HeadingTwo from "@/atoms/heading/two/extrabold/index.astro"
-import Link from "@/atoms/link/index.astro"
+import Link from "@/atoms/link/target-blank/index.astro"
 
 // GET ASTRO PROPS
-const { ENVIRONMENT } = Astro.props
+const {
 
-const data = {
+    data,
+    ENVIRONMENT
 
-    title: "let’s work.",
-    email: "info@fiftyandfive.com.",
-    email_link: "mailto:info@fiftyandfive.com.",
-    contact_number: "310.902.3246",
-    contact_number_link: "tel:310.902.3246",
-    linkedin_title: "LinkedIn.",
-    linkedin_link: "https://www.linkedin.com/company/fiftyandfive"
-
-}
+} = Astro.props
 
 ---
-<Header ENVIRONMENT={ ENVIRONMENT } />
+<Header
+    ENVIRONMENT={ ENVIRONMENT }
+/>
 <Container>
     <section class="md:py-20 space-y-4 md:space-y-12 relative z-10 bg-white h-screen pt-32 md:pt-52">
         <HeadingTwo>{ data.title }</HeadingTwo>
         <section>
             <ContactInformation
                 aria_label={ data.email }
-                href={ data.email_link }
+                href={ "mailto:" + data.email }
                 title={ data.email }
             />
             <ContactInformation
                 aria_label={ data.contact_number }
-                href={ data.contact_number_link }
+                href={ "tel:" + data.contact_number }
                 title={ data.contact_number }
             />
             <div class="group w-fit">
                 <Link href={ data.linkedin_link } aria_label={ data.linkedin_title }>
-                    <span class="text-2xl md:text-4xl font-light font-helvetica_neue">
+                    <span class="text-2xl md:text-4xl font-light font-helvetica_neue_light">
                         { data.linkedin_title }
                     </span>
                 </Link>

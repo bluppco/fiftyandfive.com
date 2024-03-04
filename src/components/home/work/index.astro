@@ -10,26 +10,21 @@ import Video from "@/atoms/video/index.astro"
 const {
 
     CDN,
+    data,
     PROJECT
 
 } = Astro.props
-
-const data = Array(12).fill({
-
-    source: "/delete-later/SM-2.mp4"
-
-})
 
 ---
 <Container>
     <section class="grid md:grid-cols-3 gap-4 md:gap-5 pb-10 md:pb-32 relative z-10 bg-white h-full">
         {
 
-            data.map( ( value ) => {
+            data.videos.map( ( value ) => {
 
                 return(
                     <Video>
-                        <source src={ value.source } type="video/mp4" />
+                        <source src={ CDN + PROJECT + "/" + value.file } type="video/mp4" />
                     </Video>
                 )
 
