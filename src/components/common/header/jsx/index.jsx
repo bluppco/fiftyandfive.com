@@ -58,7 +58,7 @@ const Header = ( props ) => {
                         <nav className="flex justify-between items-center py-6">
                             <div onMouseEnter={ () => updateNavigationDisplay( null ) }>
                                 <LinkAtom href="/" aria_label="FIFTY & FIVE.">
-                                    <p className="text-[#101010] font-jost font-thin text-5xl">FIFTY & FIVE.</p>
+                                    <p className="text-[#101010] font-jost font-thin text-5xl tracking-tighter">FIFTY & FIVE.</p>
                                 </LinkAtom>
                             </div>
                             <ul className="flex items-center gap-8">
