@@ -15,7 +15,7 @@ const description = marked.parse( data.description )
 
 ---
 <Container>
-    <section class="md:w-[60%] space-y-4 md:space-y-14 md:py-20">
+    <section class="md:w-[60%] space-y-2 md:space-y-4 md:py-20">
         <HeadingTwo>{ data.title }</HeadingTwo>
         <section set:html={ description } class="markdown paragraph4xl" />
     </section>
