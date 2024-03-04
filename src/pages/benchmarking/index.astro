@@ -12,16 +12,15 @@ import Container from "@/layouts/container/index.astro"
 // IMPORTS ASTRO COMPONENTS
 import Footer from "@/components/common/footer/index.astro"
 import Header from "@/components/common/header/index.astro"
-import HeaderBanner from "@/components/common/header-banner/index.astro"
 
 // IMPORTS JSX COMPONENTS
 import BenchmarkingJSX from "@/components/benchmarking/index.jsx"
 
 // IMPORTS BENCHMARKING FROM MD
-import { frontmatter as about_page_benchmarking } from "@/content/benchmarking/home.mdx"
-import { frontmatter as contact_page_benchmarking } from "@/content/benchmarking/home.mdx"
+import { frontmatter as about_page_benchmarking } from "@/content/benchmarking/about.mdx"
+import { frontmatter as contact_page_benchmarking } from "@/content/benchmarking/contact.mdx"
 import { frontmatter as home_page_benchmarking } from "@/content/benchmarking/home.mdx"
-import { frontmatter as spotlight_page_benchmarking } from "@/content/benchmarking/home.mdx"
+import { frontmatter as spotlight_page_benchmarking } from "@/content/benchmarking/spotlight.mdx"
 
 ---
 <Layout
@@ -29,10 +28,9 @@ import { frontmatter as spotlight_page_benchmarking } from "@/content/benchmarki
 	description={ "Benchmarking" }
 	image=""
 >
-    <HeaderBanner
+    <Header
         ENVIRONMENT={ ENVIRONMENT }
     />
-    <Header />
     <section class="py-40">
         <Container>
             <section class="relative h-full z-10 bg-white">
