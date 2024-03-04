@@ -35,13 +35,15 @@ import { frontmatter as spotlight_page_benchmarking } from "@/content/benchmarki
     <Header />
     <section class="py-40">
         <Container>
-            <BenchmarkingJSX
-                about_page_benchmarking={ about_page_benchmarking }
-                client:load
-                contact_page_benchmarking={ contact_page_benchmarking }
-                home_page_benchmarking={ home_page_benchmarking }
-                spotlight_page_benchmarking={ spotlight_page_benchmarking }
-            />
+            <section class="relative h-full z-10">
+                <BenchmarkingJSX
+                    about_page_benchmarking={ about_page_benchmarking }
+                    client:load
+                    contact_page_benchmarking={ contact_page_benchmarking }
+                    home_page_benchmarking={ home_page_benchmarking }
+                    spotlight_page_benchmarking={ spotlight_page_benchmarking }
+                />
+            </section>
         </Container>
     </section>
     <Footer />
