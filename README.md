@@ -1,19 +1,57 @@
-# Astro Boilerplate
-## How to use the setup?
-### Step 1
-Astro project init
+# mediacharge.com
+Current Website: https://fiftyandfive.com/
+\
+\
+Blupp Website: https://fiftyandfive.blupp.co/
 
-`npm create astro@latest <insert project name>`
+## Table of Contents
 
-### Step 2
-Adding Cloudflare, Tailwind and React to the project
+- Overview
+- Installation
+- Details
 
-`npx astro add cloudflare tailwind react framer-motion mdx`
+### Overview
 
-### Step 3
-Adding packages for Shadcn UI to work. There's no need to add the shadcn, just the dependencies.
+#### Tech Stack
+- Astro
+- Tailwind CSS
+- JavaScript
+- MDX
 
-`npm i @radix-ui/react-icons class-variance-authority clsx tailwind-merge tailwindcss-animate`
+#### CDN
+- Cloudflare
+- Bunny ( for images )
 
-### Step 4
-We copied the dev.vars file, now rename the file by appending . before the name.
+### Installation
+
+#### Clone the repository
+git clone https://github.com/bluppco/fiftyandfive.com.git
+
+#### Navigate to the project directory
+cd fiftyandfive.com
+
+#### Install dependencies
+npm install
+
+#### Start the development server
+npm run dev
+
+Visit http://localhost:4321 in your browser to view the cloned website.
+
+### Details
+
+#### Variables used in .dev.vars file
+
+CDN
+ENDPOINT
+ENVIRONMENT
+PROJECT
+
+#### Fonts
+
+- Helvetica Neue
+
+#### Headings
+
+- Two : font-helvetica_neue text-4xl md:text-5xl
+- Three : font-helvetica_neue text-3xl md:text-4xl font-semibold

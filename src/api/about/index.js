@@ -12,10 +12,10 @@ export const aboutAPI = async ( ENVIRONMENT, ENDPOINT ) => {
     const portfolio_network_data = await fetch( ENDPOINT + "/page/portfolio" )
     const portfolio_data_json = await portfolio_network_data.json()
 
-    const { about } = data_json.data
+    const { about, meta } = data_json.data
     const { page } = page_data_json.data
     const portfolio = portfolio_data_json.data.page
 
-    return { about, page, portfolio }
+    return { about, page, portfolio, meta }
 
 }

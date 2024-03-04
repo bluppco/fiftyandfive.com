@@ -64,12 +64,14 @@ const Header = ( props ) => {
                             <ul className="flex items-center gap-8">
                                 {
 
-                                    header_data.map( ( value ) => {
+                                    header_data.map( ( value, index ) => {
 
                                         return(
-                                            <LinkAtom href={ value.data.link } aria_label={ value.data.title }>
-                                                <li className="uppercase text-faf_black hover:text-faf_gray">{ value.data.title }</li>
-                                            </LinkAtom>
+                                            <li className="uppercase text-faf_black hover:text-faf_gray" key={ index }>
+                                                <LinkAtom href={ value.data.link } aria_label={ value.data.title }>
+                                                    { value.data.title }
+                                                </LinkAtom>
+                                            </li>
                                         )
 
                                     })

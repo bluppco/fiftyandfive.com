@@ -1,14 +1,16 @@
 ---
 const { cy } = Astro.props
 ---
-<video
-    autoplay={ true }
-    class="h-full w-full object-cover"
-    data-cy={ cy }
-    loop={ true }
-    muted={ true }
-    playsinline={ true }
-    preload="auto"
->
-    <slot/>
-</video>
+<div class="bg-zinc-200">
+    <video
+        autoplay={ true }
+        class="h-full w-full object-cover"
+        data-cy={ cy }
+        loop={ true }
+        muted={ true }
+        playsinline={ true }
+        preload="auto"
+    >
+        <slot/>
+    </video>
+</div>
