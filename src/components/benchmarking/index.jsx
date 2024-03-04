@@ -1,3 +1,4 @@
+// IMPORTS TABLE COMPONENTS
 import {
 
     Table,
@@ -9,6 +10,9 @@ import {
     TableRow,
 
 } from "@/components/ui/table"
+
+// IMPORTS COMPONENTS
+import Tableheader from "@/components/benchmarking/table-header/index.jsx"
 
 
 const BenchmarkingJSX = ( props ) => {
@@ -49,26 +53,17 @@ const BenchmarkingJSX = ( props ) => {
         about_page_benchmarking,
         contact_page_benchmarking,
         home_page_benchmarking,
-        spotlight_page_benchmarking
+        spotlight_page_benchmarking,
+        total_bandwidth
 
     } = props
     return (
         <div className="flex flex-col gap-10">
+            {/* HOME PAGE BENCHMARKING TABLE */}
             <h1 className="font-semibold">Benchmarking Home Page</h1>
             <Table>
                 <TableCaption>Type Split</TableCaption>
-                <TableHeader>
-                    <TableRow>
-                        <TableHead className="w-[100px]">Type</TableHead>
-                        <TableHead className="text-center">Current Size (Kb)</TableHead>
-                        <TableHead className="text-center">Current Size (Mb)</TableHead>
-                        <TableHead className="text-center">Blupp Size (Kb)</TableHead>
-                        <TableHead className="text-center">Blupp Size (Mb)</TableHead>
-                        <TableHead className="text-center">Change (Mb)</TableHead>
-                        <TableHead className="text-center">Change %</TableHead>
-                        <TableHead className="text-center">Less %</TableHead>
-                    </TableRow>
-                </TableHeader>
+                <Tableheader />
                 <TableBody>
                     {
 
@@ -91,9 +86,91 @@ const BenchmarkingJSX = ( props ) => {
                     }
                 </TableBody>
             </Table>
-            <h1 className="font-semibold">Bandwidth Saved</h1>
+            {/* ABOUT PAGE BENCHMARKING TABLE */}
+            <h1 className="font-semibold">Benchmarking About Page</h1>
             <Table>
-                <TableCaption>Bandwidth Saved</TableCaption>
+                <TableCaption>Type Split</TableCaption>
+                <Tableheader />
+                <TableBody>
+                    {
+
+                        about_page_benchmarking.data.map( ( value, index ) => {
+
+                            return (
+                                <TableRow className={ value.type === "Total" ? "font-semibold" : "" }  key={ "type-split-" + index }>
+                                    <TableCell className="font-semibold">{ value.type }</TableCell>
+                                    <TableCell className="text-center">{ value.current_size }</TableCell>
+                                    <TableCell className="text-center">{ ( value.current_size /1000).toFixed(2) }</TableCell>
+                                    <TableCell className="text-center">{ value.blupp_size }</TableCell>
+                                    <TableCell className="text-center">{ ( value.blupp_size /1000).toFixed(2) }</TableCell>
+                                    <TableCell className="text-center">{ ((value.current_size - value.blupp_size)/1000).toFixed(2) }</TableCell>
+                                    <TableCell className="text-center">{ ( (value.current_size - value.blupp_size )/value.current_size*100).toFixed(2) }</TableCell>
+                                    <TableCell className="text-center">{ ( (value.current_size - value.blupp_size )/value.blupp_size*100).toFixed(2) }</TableCell>
+                                </TableRow>
+                            )
+
+                        })
+                    }
+                </TableBody>
+            </Table>
+            {/* SPOTLIGHT PAGE BENCHMARKING TABLE */}
+            <h1 className="font-semibold">Benchmarking Spotlight Page</h1>
+            <Table>
+                <TableCaption>Type Split</TableCaption>
+                <Tableheader />
+                <TableBody>
+                    {
+
+                        spotlight_page_benchmarking.data.map( ( value, index ) => {
+
+                            return (
+                                <TableRow className={ value.type === "Total" ? "font-semibold" : "" }  key={ "type-split-" + index }>
+                                    <TableCell className="font-semibold">{ value.type }</TableCell>
+                                    <TableCell className="text-center">{ value.current_size }</TableCell>
+                                    <TableCell className="text-center">{ ( value.current_size /1000).toFixed(2) }</TableCell>
+                                    <TableCell className="text-center">{ value.blupp_size }</TableCell>
+                                    <TableCell className="text-center">{ ( value.blupp_size /1000).toFixed(2) }</TableCell>
+                                    <TableCell className="text-center">{ ((value.current_size - value.blupp_size)/1000).toFixed(2) }</TableCell>
+                                    <TableCell className="text-center">{ ( (value.current_size - value.blupp_size )/value.current_size*100).toFixed(2) }</TableCell>
+                                    <TableCell className="text-center">{ ( (value.current_size - value.blupp_size )/value.blupp_size*100).toFixed(2) }</TableCell>
+                                </TableRow>
+                            )
+
+                        })
+                    }
+                </TableBody>
+            </Table>
+            {/* CONTACT PAGE BENCHMARKING TABLE */}
+            <h1 className="font-semibold">Benchmarking Contact Page</h1>
+            <Table>
+                <TableCaption>Type Split</TableCaption>
+                <Tableheader />
+                <TableBody>
+                    {
+
+                        contact_page_benchmarking.data.map( ( value, index ) => {
+
+                            return (
+                                <TableRow className={ value.type === "Total" ? "font-semibold" : "" }  key={ "type-split-" + index }>
+                                    <TableCell className="font-semibold">{ value.type }</TableCell>
+                                    <TableCell className="text-center">{ value.current_size }</TableCell>
+                                    <TableCell className="text-center">{ ( value.current_size /1000).toFixed(2) }</TableCell>
+                                    <TableCell className="text-center">{ value.blupp_size }</TableCell>
+                                    <TableCell className="text-center">{ ( value.blupp_size /1000).toFixed(2) }</TableCell>
+                                    <TableCell className="text-center">{ ((value.current_size - value.blupp_size)/1000).toFixed(2) }</TableCell>
+                                    <TableCell className="text-center">{ ( (value.current_size - value.blupp_size )/value.current_size*100).toFixed(2) }</TableCell>
+                                    <TableCell className="text-center">{ ( (value.current_size - value.blupp_size )/value.blupp_size*100).toFixed(2) }</TableCell>
+                                </TableRow>
+                            )
+
+                        })
+                    }
+                </TableBody>
+            </Table>
+            {/* BANDWIDTH SAVED TABLE */}
+            <h1 className="font-semibold">Total Bandwidth Saved</h1>
+            <Table>
+                <TableCaption>Total Bandwidth Saved</TableCaption>
                 <TableHeader>
                     <TableRow>
                         <TableHead className="w-[100px]">Hits</TableHead>
@@ -109,7 +186,7 @@ const BenchmarkingJSX = ( props ) => {
                 <TableBody>
                     {
 
-                        home_page_benchmarking.bandwidth.map( ( value, index ) => {
+                        total_bandwidth.bandwidth.map( ( value, index ) => {
 
                             return (
                                 <TableRow className={ value.type === "Total" ? "font-semibold" : "" } key={ "bandwidth-saved-" + index }>

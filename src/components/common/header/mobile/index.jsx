@@ -19,7 +19,7 @@ const HeaderMobile = ( props ) => {
             <nav>
                 <div className="flex justify-between items-center z-30 relative">
                     <Link href="/" aria_label="FIFTY & FIVE.">
-                        <p className="text-[#101010] font-helvetica_neue font-thin text-2xl">FIFTY & FIVE.</p>
+                        <p className="text-[#101010] font-jost font-thin text-2xl">FIFTY & FIVE.</p>
                     </Link>
                     <div onClick={ () => updateOpen( !isOpen ) }>
                         {
@@ -67,9 +67,9 @@ const HeaderMobile = ( props ) => {
                                     header_data.map( ( value ) => {
 
                                         return(
-                                            <Link href={ value.data.link } aria_label={ value.data.title }>
-                                                <li className="uppercase text-faf_black hover:text-faf_gray">{ value.data.title }</li>
-                                            </Link>
+                                            <li className="uppercase text-faf_black hover:text-faf_gray font-helvetica_neue_light">
+                                                <Link href={ value.data.link } aria_label={ value.data.title }>{ value.data.title }</Link>
+                                            </li>
                                         )
 
                                     })
