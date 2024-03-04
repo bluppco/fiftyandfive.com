@@ -53,7 +53,8 @@ const BenchmarkingJSX = ( props ) => {
         about_page_benchmarking,
         contact_page_benchmarking,
         home_page_benchmarking,
-        spotlight_page_benchmarking
+        spotlight_page_benchmarking,
+        total_bandwidth
 
     } = props
     return (
@@ -167,9 +168,9 @@ const BenchmarkingJSX = ( props ) => {
                 </TableBody>
             </Table>
             {/* BANDWIDTH SAVED TABLE */}
-            <h1 className="font-semibold">Bandwidth Saved</h1>
+            <h1 className="font-semibold">Total Bandwidth Saved</h1>
             <Table>
-                <TableCaption>Bandwidth Saved</TableCaption>
+                <TableCaption>Total Bandwidth Saved</TableCaption>
                 <TableHeader>
                     <TableRow>
                         <TableHead className="w-[100px]">Hits</TableHead>
@@ -185,7 +186,7 @@ const BenchmarkingJSX = ( props ) => {
                 <TableBody>
                     {
 
-                        home_page_benchmarking.bandwidth.map( ( value, index ) => {
+                        total_bandwidth.bandwidth.map( ( value, index ) => {
 
                             return (
                                 <TableRow className={ value.type === "Total" ? "font-semibold" : "" } key={ "bandwidth-saved-" + index }>
