@@ -1,5 +1,5 @@
 .markdown.paragraph4xl p {
-    @apply font-helvetica_neue_thin font-thin text-4xl text-faf_charcoal_black py-4 !important;
+    @apply font-jost font-thin text-4xl text-faf_charcoal_black py-4 !important;
 }
 
 @font-face {
