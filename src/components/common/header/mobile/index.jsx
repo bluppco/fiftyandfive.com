@@ -67,7 +67,7 @@ const HeaderMobile = ( props ) => {
                                     header_data.map( ( value ) => {
 
                                         return(
-                                            <li className="uppercase text-faf_black hover:text-faf_gray font-helvetica_neue_medium">
+                                            <li className="uppercase text-faf_black hover:text-faf_gray font-helvetica_neue_light">
                                                 <Link href={ value.data.link } aria_label={ value.data.title }>{ value.data.title }</Link>
                                             </li>
                                         )

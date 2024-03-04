@@ -67,7 +67,7 @@ const Header = ( props ) => {
                                     header_data.map( ( value, index ) => {
 
                                         return(
-                                            <li className="uppercase text-faf_black hover:text-faf_gray font-helvetica_neue_medium tracking-wide" key={ index }>
+                                            <li className="uppercase text-faf_black hover:text-faf_gray font-helvetica_neue_light tracking-wide" key={ index }>
                                                 <LinkAtom href={ value.data.link } aria_label={ value.data.title }>
                                                     { value.data.title }
                                                 </LinkAtom>

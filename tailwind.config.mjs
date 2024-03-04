@@ -55,6 +55,7 @@ module.exports = {
 			},
 			fontFamily: {
 
+				"helvetica_neue_light": [ "Helvetica Neue Light", "Sans-serif"],
 				"helvetica_neue_medium": [ "Helvetica Neue Medium", "Sans-serif" ],
 				"jost": [ "Jost", "sans-serif" ]
 
