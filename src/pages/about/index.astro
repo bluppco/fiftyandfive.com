@@ -20,6 +20,7 @@ const {
 
 	about,
 	page,
+    meta,
     portfolio
 
 } = data
@@ -32,9 +33,9 @@ import About from "@/components/about/index.astro"
 
 ---
 <Layout
-	description=""
-	image=""
-	title=""
+	description={ meta.description }
+	image={ meta.cover }
+	title={ meta.title }
 >
 	<About
         CDN={ CDN }
